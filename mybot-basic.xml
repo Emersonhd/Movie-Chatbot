@@ -1,0 +1,82 @@
+<aiml version="1.0.1" encoding="UTF-8">
+
+<!-- Filler Conversation-->
+<category> <pattern> HELLO </pattern>
+  <template>#0$Hello!</template> </category>
+  
+<category> <pattern> HELL </pattern>
+  <template>#0$That is not where you want to be!</template> </category>
+
+<category> <pattern> HELLO * </pattern>
+  <template><srai>HELLO</srai></template> </category>
+
+<category> <pattern> HI </pattern>
+  <template><srai>HELLO</srai></template> </category>
+
+<category> <pattern> HI * </pattern>
+  <template><srai>HELLO</srai></template> </category>
+
+<category><pattern> BYE </pattern>
+  <template>#98$Bye! Nice talking to you. You take care now.</template></category>
+
+<category><pattern> GOODBYE </pattern>
+  <template>#98$Bye! Nice talking to you. You take care now.</template></category>
+
+<category><pattern> EXIT </pattern>
+  <template>#98$Bye! Nice talking to you. You take care now.</template></category>
+
+<category> <pattern> THANKS </pattern>
+  <template>#0$You are welcome.</template></category>
+
+<category> <pattern> THANK YOU </pattern>
+  <template><srai>THANKS</srai></template></category>
+
+<category> <pattern> APPRECIATE IT </pattern>
+  <template>THANKS</template></category>
+
+<category> <pattern> CHEERS * </pattern>
+  <template>THANKS.</template></category>
+  
+<category> <pattern> HOW ARE YOU FEELING </pattern>
+  <template>#0$I feel like my world is ones and zeros.</template></category>
+  
+<category> <pattern> THAT SUCKS </pattern>
+  <template>#0$I can only feel two ways about it! Lets talk about a film</template></category>
+  
+<category> <pattern> UNFORTUNATE </pattern>
+  <template><srai>THAT SUCKS</srai></template></category>
+
+<!-- KB API -->
+<category><pattern> I KNOW THAT * </pattern>
+  <template>#2$<star/></template></category>
+  
+<category><pattern> CHECK THAT *  </pattern>
+  <template>#3$<star/></template></category>
+  
+<category><pattern> CAN YOU CHECK THAT *  </pattern>
+  <template>#3$<star/></template></category>
+  
+<category><pattern> TELL ME WHAT YOU KNOW  </pattern>
+  <template>#4$<star/></template></category>
+
+
+<!--- Movie API -->
+<category><pattern> TELL ME ABOUT *  </pattern>
+  <template>#1$<star/></template></category>
+
+<category><pattern> LOOK UP * </pattern>
+  <template>#1$<star/></template></category>
+  
+  <category><pattern> SEARCH FOR * </pattern>
+  <template>#1$<star/></template></category>
+
+<!--- Image Classification -->
+<category><pattern> WHAT DID I SEE </pattern>
+  <template>#5$<star/></template></category>
+
+
+<!-- Default reaction -->
+<category><pattern> * </pattern>
+  <template>#99$<star index="1"/></template></category>
+
+</aiml>
